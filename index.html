@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <!-- Global Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Weather API Dashboard</title>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <h1 class="display-3 bg">Weather API Dashboard</h1>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-4 bg-warning border-dark rounded">
+          <p class="search-header">Search For Cities Daily Weather Forecast</p>
+          <div class="input-group border-dark m-1 rounded">
+<!---------------------- Search history dynamically inserts here  --------------------------------->
+
+            <input
+              id="city-input"
+              type="text"
+              class="form-control"
+              placeholder="Enter City"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button" id="search-button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="search-history border-dark m-1 rounded">
+            <button
+              class="btn btn-primary m-1"
+              type="button"
+              id="clear-history"
+            >
+              Clear Browsing History
+            </button>
+            <form id="history"></form>
+          </div>
+        </div>
+        <div class="col-8 border-dark rounded">
+          <div class="row">
+            <div class="col-12 m-3 rounded">
+              <div class="row">
+                <div class="col-12">
+                  <span id="city-name" class="city-name align-middle"></span>
+                  <img id="current-pic"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <p id="temperature"></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <p id="humidity"></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <p id="wind-speed"></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <p id="UV-index"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 m-3 rounded">
+
+    <!------------------- DailyWeather Forecasting Can Be Dynamically Inserted Below ------------------------------------>
+              <h4>5-Day Forcast:</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col forecast bg-primary text-red ml-3 mb-3 rounded"
+            ></div>
+            <div
+              class="col forecast bg-primary text-white ml-3 mb-3 rounded"
+            ></div>
+            <div
+              class="col forecast bg-primary text-blue ml-3 mb-3 rounded"
+            ></div>
+            <div
+              class="col forecast bg-primary text-purple ml-3 mb-3 rounded"
+            ></div>
+            <div
+              class="col forecast bg-primary text-green ml-3 mb-3 rounded"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Only Javascript Bootstrap -->
+    <script src="script.js"></script>
+  </body>
+</html>
